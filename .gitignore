@@ -1,3 +1,6 @@
 __pycache__/
 results
 .DS_Store
+output.log
+output_2.log
+output_3.log

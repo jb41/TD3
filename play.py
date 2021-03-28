@@ -42,13 +42,9 @@ if __name__ == "__main__":
   action_dim = env.action_space.shape[0] 
   max_action = float(env.action_space.high[0])
 
-  # import pdb; pdb.set_trace()
-
   policy = DDPG.DDPG(state_dim, action_dim, max_action, discount=discount,
                      tau=tau, lr_actor=lr_actor, lr_critic=lr_critic,
                      critic_weight_decay=critic_weight_decay)
-
-
 
   file_name = "p"
   print("---------------------------------------")
@@ -69,6 +65,6 @@ if __name__ == "__main__":
     episode_reward += reward
     
     if done:
-      print('Episode reward: %3.f' % episode_reward)
+      print('Episode reward: %.1f' % episode_reward)
       episode_reward = 0.0
       state, done = env.reset(), False
