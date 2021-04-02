@@ -32,6 +32,8 @@ critic_weight_decay = 1e-3 # 1e-2
 if __name__ == "__main__":
   
   env = gym.make(env_name)
+  # Uncomment if you want to save video
+  # env = gym.wrappers.Monitor(env, './', force=True)
 
   # Set seeds
   env.seed(seed)
